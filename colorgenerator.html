@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <style>
+        .container{
+            height:400px;
+            width: 600px;
+            border:1.2px solid black;
+            border-radius: 22px;
+            text-align: center;
+            align-content: center;
+            margin: 2rem 0;
+            color:rgb(223, 221, 221);
+        }
+        body{
+
+            justify-items: center;
+          
+            text-align: center;
+           
+        }
+        button{
+            padding: 1rem;
+            border-radius: 22px;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Color Generator</h1>
+    <div class="container">
+        <h2>
+            I'am Changing!
+        </h2>
+        
+    </div>
+    <button onclick="changeColor()">I'm also Changing</button>
+
+    <script>
+        function generateColor(){
+            let r= Math.floor(Math.random()*255);
+            let g= Math.floor(Math.random()*255);
+            let b= Math.floor(Math.random()*255);
+            return `rgb(${r},${g},${b}) `;
+
+        }
+
+        function changeColor(){
+            let change= document.querySelector('.container');
+         
+        //    change.style.backgroundColor =generateColor();
+           let newColor = generateColor();
+           change.style.backgroundColor = newColor;
+           change.innerHTML = newColor;
+
+           let button= document.querySelector('button');
+           button.style.backgroundColor = newColor;
+        }
+    </script>
+</body>
+</html>
