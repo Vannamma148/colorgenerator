@@ -7,7 +7,7 @@
     <style>
         .container{
             height:400px;
-            width: 600px;
+            width: 500px;
             border:1.2px solid black;
             border-radius: 22px;
             text-align: center;
@@ -18,27 +18,34 @@
         body{
 
             justify-items: center;
-          margin:1rem auto:
+            margin:1rem auto:
             text-align: center;
            
         }
         button{
-            margin:1rem auto;
+            
             padding: 1rem;
             border-radius: 22px;
+        }
+        btn, center{
+            margin:1rem auto;
         }
       
     </style>
 </head>
 <body>
-    <h1>Color Generator</h1>
+    <div class="center">
+        <h1>Color Generator</h1>
+    </div>
     <div class="container">
         <h2>
             I'am Changing!
         </h2>
         
     </div>
-    <button onclick="changeColor()">I'm also Changing</button>
+    <div class="btn">
+        <button onclick="changeColor()">Click To Change Color, I'm also Changing!</button>
+    </div>
 
     <script>
         function generateColor(){
