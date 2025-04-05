@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Generator</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+
+        }
         .container{
             height:400px;
             width: 500px;
@@ -52,7 +57,7 @@
             let r= Math.floor(Math.random()*255);
             let g= Math.floor(Math.random()*255);
             let b= Math.floor(Math.random()*255);
-            return `linear-gradient(${r},${g},${b}) `;
+            return `rgb(${r},${g},${b}) `;
 
         }
 
@@ -61,7 +66,7 @@
          
         //    change.style.backgroundColor =generateColor();
            let newColor = generateColor();
-           change.style.background = newColor;
+           change.style.backgroundColor = newColor;
            change.innerHTML = newColor;
 
            let button= document.querySelector('button');
